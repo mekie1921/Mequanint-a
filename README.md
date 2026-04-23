@@ -1,2 +1,2 @@
-# Mequanint-a
+# Mequanint
 collaborate practice
