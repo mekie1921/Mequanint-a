@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.HomeController"
+            stylesheets="@home.css">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header">
+            <ImageView fitHeight="50" preserveRatio="true">
+                <image>
+                    <Image url="@images/9.png"/>
+                </image>
+            </ImageView>
+
+            <Label styleClass="title" text="📚 Online Library"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <HBox fx:id="navMenu" alignment="CENTER_RIGHT" spacing="15">
+                <Button styleClass="nav, nav-active" text="HOME"/>
+                <Button onAction="#handleBooks" styleClass="nav" text="BOOKS"/>
+                <Button fx:id="loginButton" onAction="#handleLogin" styleClass="nav" text="LOGIN"/>
+                <Button fx:id="signupButton" onAction="#handleSignUp" styleClass="nav" text="SIGN UP"/>
+                <Button fx:id="profileButton" onAction="#handleProfile" styleClass="nav" text="PROFILE" visible="false" managed="false"/>
+                <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="nav" text="LOGOUT" visible="false" managed="false"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- CENTER: Hero + Features -->
+    <center>
+        <StackPane styleClass="hero-bg">
+            <!-- Floating Book Decorations -->
+            <ImageView fitWidth="80" opacity="0.3" style="-fx-rotate: -15;" styleClass="floating" translateY="-100" translateX="-120">
+                <image><Image url="@images/book-icon.png"/></image>
+            </ImageView>
+            <ImageView fitWidth="60" opacity="0.2" style="-fx-rotate: 20;" styleClass="floating" translateY="80" translateX="150">
+                <image><Image url="@images/book-icon.png"/></image>
+            </ImageView>
+            <ImageView fitWidth="70" opacity="0.25" style="-fx-rotate: -10;" styleClass="floating" translateY="150" translateX="-180">
+                <image><Image url="@images/book-icon.png"/></image>
+            </ImageView>
+
+            <VBox alignment="CENTER" spacing="16" styleClass="hero-content">
+                <Label styleClass="headline" text="Welcome to the Library"/>
+                <Label styleClass="sub" text="📚 Explore. Learn. Grow."/>
+                <Label styleClass="hours" text="🕙 Open: 09:00 – 15:00 (Mon–Fri)"/>
+
+                <!-- CTA Buttons -->
+                <HBox spacing="20" alignment="CENTER">
+                    <Button onAction="#handleBooks" styleClass="btn-primary" text="📖 Browse Books"/>
+                    <Button onAction="#handleSignUp" styleClass="btn-outline" text="✨ Join Now"/>
+                </HBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox alignment="CENTER" styleClass="footer">
+            <Label text="© 2025 Online Library Management System | Empowering Readers"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

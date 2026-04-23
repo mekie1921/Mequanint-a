@@ -1,0 +1,142 @@
+/* signup-style.css */
+
+.root {
+    -fx-background-color: linear-gradient(from 30% 20% to 70% 90%, #6a11cb, #2575fc);
+}
+
+.signup-container {
+    -fx-alignment: center;
+    -fx-spacing: 25;
+    -fx-padding: 40;
+    -fx-background-color: rgba(255, 255, 255, 0.94);
+    -fx-border-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 20, 0, 0, 10);
+}
+
+.app-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.subtitle {
+    -fx-font-size: 15px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.signup-box {
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-padding: 25;
+    -fx-max-width: 400;
+    -fx-background-color: white;
+    -fx-border-radius: 12;
+    -fx-border-color: #f0f0f0;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0, 0, 0);
+}
+
+.input-group {
+    -fx-spacing: 6;
+}
+
+.field-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+}
+
+.icon-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #9b59b6;
+    -fx-padding: 0 4 0 0;
+}
+
+.input-field {
+    -fx-pref-width: 300;
+
+    -fx-pref-height: 42;
+    -fx-font-size: 15px;
+    -fx-padding: 0 12;
+    -fx-background-color: white;
+    -fx-text-fill: #2c3e50;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 8;
+    -fx-border-width: 2px;
+}
+
+.input-field:focused {
+    -fx-border-color: #9b59b6;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(155, 89, 182, 0.3), 6, 0, 0, 0);
+}
+
+/* Buttons */
+.btn-signup {
+    -fx-pref-width: 200;
+    -fx-pref-height: 48;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #9b59b6;
+    -fx-border-radius: 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 0, 3);
+}
+
+.btn-signup:hover {
+    -fx-background-color: #8e44ad;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 4);
+}
+
+.btn-signup:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 2);
+}
+
+.btn-back {
+    -fx-background-color: transparent;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8;
+}
+
+.btn-back:hover {
+    -fx-text-fill: #9b59b6;
+    -fx-underline: true;
+}
+
+/* Login Link */
+#loginLink {
+    -fx-cursor: hand;
+}
+
+#loginLink:hover {
+    -fx-text-fill: #8e44ad;
+}
+
+.signup-container {
+    -fx-spacing: 18;
+    /* reduced */
+    -fx-padding: 15 40 25 40;
+    /* top reduced */
+    /* ... rest unchanged */
+}
+
+.app-title {
+    -fx-font-size: 26px;
+    /* slightly smaller */
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    /* slightly smaller */
+    -fx-text-fill: #7f8c8d;
+    -fx-padding: 2 0 8 0;
+    /* reduce gap below */
+}

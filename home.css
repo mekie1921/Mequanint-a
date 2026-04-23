@@ -1,0 +1,128 @@
+/* home.css */
+
+.root {
+    -fx-font-family: "Segoe UI", "Open Sans", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+    -fx-background-color: rgba(255, 255, 255, 0.92);
+    -fx-padding: 12 30;
+    -fx-border-bottom-color: #eee;
+    -fx-border-bottom-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.nav {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-cursor: hand;
+}
+
+.nav:hover {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-translate-y: -2;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 6, 0, 0, 2);
+}
+
+.nav-active {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-bg {
+    -fx-background-color: linear-gradient(from 20% 0% to 80% 100%, #1a2980, #26d0ce);
+    -fx-effect: null;
+}
+
+.hero-content {
+    -fx-alignment: center;
+    -fx-spacing: 16;
+    -fx-padding: 40 20;
+}
+
+.headline {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 0);
+}
+
+.sub {
+    -fx-font-size: 22px;
+    -fx-text-fill: rgba(255,255,255,0.9);
+    -fx-font-weight: 300;
+}
+
+.hours {
+    -fx-font-size: 16px;
+    -fx-text-fill: rgba(255,255,255,0.85);
+    -fx-padding: 10 0 20 0;
+}
+
+/* Floating book animation */
+.floating {
+    -fx-opacity: 0.25;
+}
+
+/* Buttons */
+.btn-primary {
+    -fx-pref-width: 180;
+    -fx-pref-height: 50;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #27ae60;
+    -fx-border-radius: 25;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 0, 3);
+}
+
+.btn-primary:hover {
+    -fx-background-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 4);
+    -fx-translate-y: -2;
+}
+
+.btn-outline {
+    -fx-pref-width: 180;
+    -fx-pref-height: 50;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 25;
+    -fx-cursor: hand;
+}
+
+.btn-outline:hover {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-translate-y: -2;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 12 0;
+}
+
+.footer .label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 14px;
+}

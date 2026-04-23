@@ -1,0 +1,52 @@
+/* profile-style.css */
+
+.root {
+    -fx-background-color: #f8f9fa;
+}
+
+.profile-container {
+    -fx-padding: 30;
+    -fx-spacing: 25;
+}
+
+.profile-card {
+    -fx-padding: 25 40 25 40;
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 0);
+}
+
+.label-bold {
+    -fx-font-weight: bold;
+    -fx-text-fill: #444;
+    -fx-font-size: 15px;
+    -fx-min-width: 110;
+}
+
+.label-value {
+    -fx-font-size: 16px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: normal;
+}
+
+.edit-btn {
+    -fx-background-color: #9b59b6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 10 30 10 30;
+    -fx-cursor: hand;
+    -fx-border-radius: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 0);
+}
+
+.edit-btn:hover {
+    -fx-background-color: #8e44ad;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 2, 2);
+}
+
+.edit-btn:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 0);
+}

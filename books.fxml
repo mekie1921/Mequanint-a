@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.BooksController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #2c3e50; -fx-padding: 12;">
+            <Button text="← Back" onAction="#handleBack"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 16;" />
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                <Button text="👤 Profile" onAction="#handleProfile"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 16;" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- SIDEBAR + TABLE -->
+    <center>
+        <HBox spacing="15" style="-fx-padding: 15;">
+
+            <!-- LEFT SIDEBAR -->
+            <VBox spacing="15" prefWidth="160" style="-fx-background-color: #f8f9fa; -fx-padding: 12; -fx-border-radius: 6; -fx-border-color: #e0e0e0;">
+            <HBox spacing="5">
+                    <TextField fx:id="searchField" promptText="🔍 Search..." style="-fx-font-size: 14px;" HBox.hgrow="ALWAYS" />
+                    <Button text="Go" onAction="#handleSearch" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" />
+                </HBox>
+                <Button fx:id="addBtn" text="➕ Add Book" onAction="#handleAdd"
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 8 12;" />
+                <Button fx:id="deleteBtn" text="🗑️ Delete" onAction="#handleDelete"
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 8 12;" />
+                <Button fx:id="borrowBtn" text="📖 Borrow" onAction="#handleBorrow"
+                        style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 8 12;" visible="false" managed="false"/>
+                <Label text="Select books to action" style="-fx-font-size: 12px; -fx-text-fill: #777; -fx-wrap-text: true;" />
+            </VBox>
+
+            <!-- BOOKS TABLE -->
+            <VBox HBox.hgrow="ALWAYS">
+                <Label text="📚 Books Catalog" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50; -fx-padding: 0 0 10 0;" />
+                <TableView fx:id="booksTable" 
+                           style="-fx-font-size: 14px; -fx-table-cell-border-color: transparent; -fx-background-color: white;"
+                           VBox.vgrow="ALWAYS">
+                    <columns>
+                        <!-- Checkbox Column -->
+                        <TableColumn fx:id="selectColumn" text="" prefWidth="40">
+                            <graphic>
+                                <CheckBox fx:id="selectAllCheckbox" onAction="#handleSelectAll" />
+                            </graphic>
+                        </TableColumn>
+
+                        <!-- Data Columns -->
+                        <TableColumn fx:id="idColumn" text="Book ID" prefWidth="90" />
+                        <TableColumn fx:id="titleColumn" text="Title" prefWidth="180" />
+                        <TableColumn fx:id="authorColumn" text="Author" prefWidth="140" />
+                        <TableColumn fx:id="genreColumn" text="Genre" prefWidth="100" />
+                        <TableColumn fx:id="editionColumn" text="Edition" prefWidth="90" />
+                        <TableColumn fx:id="yearColumn" text="Year" prefWidth="70" />
+                    </columns>
+                </TableView>
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" stylesheets="@add-book.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: #2c3e50; -fx-padding: 12;">
+            <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="← Back to Books" />
+            
+            <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="📚 Add New Book" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- FORM -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20" styleClass="form-container">
+            <VBox spacing="12" styleClass="form-card">
+                <HBox spacing="10">
+                    <Label styleClass="label-required" text="Book ID:" />
+                    <TextField fx:id="bookIdField" promptText="e.g., BK-1001" styleClass="input" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="label-required" text="Title:" />
+                    <TextField fx:id="titleField" promptText="e.g., The Great Gatsby" styleClass="input" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="label-required" text="Author:" />
+                    <TextField fx:id="authorField" promptText="e.g., F. Scott Fitzgerald" styleClass="input" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="label-required" text="Genre:" />
+                    <TextField fx:id="genreField" promptText="e.g., Fiction, Sci-Fi" styleClass="input" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="label" text="Edition:" />
+                    <TextField fx:id="editionField" promptText="e.g., 1st, Revised" styleClass="input" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label styleClass="label-required" text="Year:" />
+                    <TextField fx:id="yearField" promptText="e.g., 1925" styleClass="input" />
+                </HBox>
+            </VBox>
+
+            <!-- BUTTONS -->
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="saveButton" onAction="#handleSave" styleClass="save-btn" text="✅ Save Book" />
+                <Button fx:id="cancelButton" onAction="#handleCancel" styleClass="cancel-btn" text="✖ Cancel" />
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

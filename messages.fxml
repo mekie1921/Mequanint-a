@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MessagesController">
+    <top>
+        <HBox spacing="20" style="-fx-background-color: #34495e; -fx-padding: 15; -fx-alignment: CENTER_LEFT;">
+            <Button text="← Back" onAction="#handleBack" style="-fx-background-color: white; -fx-text-fill: #34495e;"/>
+            <Label text="Messages" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.6">
+            <!-- Inbox -->
+            <VBox spacing="10" style="-fx-padding: 15;">
+                <Label text="📥 Inbox" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                <TableView fx:id="messagesTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="senderColumn" text="From" prefWidth="120" />
+                        <TableColumn fx:id="messageColumn" text="Message" prefWidth="250" />
+                        <TableColumn fx:id="timeColumn" text="Date" prefWidth="120" />
+                    </columns>
+                </TableView>
+            </VBox>
+            
+            <!-- Compose -->
+            <VBox spacing="10" style="-fx-padding: 15;">
+                <Label text="✍ Compose" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                <TextField fx:id="recipientField" promptText="To Username..." />
+                <TextArea fx:id="messageArea" promptText="Type your message here..." VBox.vgrow="ALWAYS" wrapText="true"/>
+                <Button text="Send Message" onAction="#handleSend" maxWidth="Infinity" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            </VBox>
+        </SplitPane>
+    </center>
+</BorderPane>
